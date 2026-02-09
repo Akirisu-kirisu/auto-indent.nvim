@@ -16,7 +16,7 @@ vim.api.nvim_create_autocmd("BufRead", {
       require("auto-indent.module").fetch_buf_indent_info(buf, config.indentexpr)
     end
 
-    vim.keymap.set("i", "<tab>", function()
+    vim.keymap.set("i", "<a-d>", function()
       if config.lightmode then
         require("auto-indent").check_indent_light()
       else
